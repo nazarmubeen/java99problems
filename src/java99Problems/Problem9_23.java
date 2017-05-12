@@ -2,6 +2,7 @@ package java99Problems;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -15,7 +16,7 @@ scala> pack(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
 res0: List[List[Symbol]] = List(List('a, 'a, 'a, 'a), List('b), List('c, 'c), List('a, 'a), List('d), List('e, 'e, 'e, 'e))
 */
 
-public class Problem9_10 {
+public class Problem9_23 {
 
 	public static void main(String[] args)
 	{
@@ -24,6 +25,8 @@ public class Problem9_10 {
 		System.out.println("run length encoding is "+ runLengthEncoding(characters));
 		System.out.println("characters after "+packConsecutiveDuplicates(characters));	
 		System.out.println("run length encoding by sequence is "+runLengthEncodingSequence(packConsecutiveDuplicates(characters)));
+		System.out.println("run length encoding by sequence is "+runLengthEncodingSequenceDuplicate(packConsecutiveDuplicates(characters)));
+		System.out.println("duplicate elements of a list "+DuplicateElements(characters));
 	}
 	
 
@@ -92,5 +95,55 @@ public class Problem9_10 {
 		return encodinglist;
 	
 	}
+	
+	/*P11 (*) Modified run-length encoding.
+	Modify the result of problem P10 in such a way that if an element has no duplicates it is simply copied into the result list. Only elements with duplicates are transferred as (N, E) terms.
+	Example:
+
+	scala> encodeModified(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
+	res0: List[Any] = List((4,'a), 'b, (2,'c), (2,'a), 'd, (4,'e))*/
+	
+	/*P10 (*) Run-length encoding of a list as sequencewise.*/
+	static ArrayList runLengthEncodingSequenceDuplicate(List<List>  lists){
+		
+		ArrayList encodinglist=new ArrayList<>();
+		
+		for(List a: lists)
+		{
+			if(a.size()==1)
+			{
+				encodinglist.add(a.get(0));
+			}
+			else{
+			ArrayList encodinglistinner=new ArrayList<>();
+			encodinglistinner.add(a.size());
+			encodinglistinner.add(a.get(0));
+			encodinglist.add(encodinglistinner);
+		
+			}
+		}
+		return encodinglist;
+	
+	}
+	
+/*	P12,P13 is same as previous starting with 
+ * P14 (*) Duplicate the elements of a list.
+	Example:
+	scala> duplicate(List('a, 'b, 'c, 'c, 'd,e))
+	res0: List[Symbol] = [[a, a], [a, a], [a, a], [a, a], [b, b], [c, c], [c, c], [a, a], [a, a], [d, d], [e, e], [e, e], [e, e], [e, e]]*/
+
+	
+	static List DuplicateElements(List<Character> characters){
+		List newlist=new ArrayList<>();
+		for(char c:characters)
+		{
+			newlist.add(Collections.nCopies(2,c ));
+	
+		}
+	System.out.println(newlist);
+	return newlist;
+	}
+	
+	
 }
 
