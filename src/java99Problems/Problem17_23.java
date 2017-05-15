@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 
-public class Problem17 {
+public class Problem17_23 {
 
 /*	P17 (*) Split a list into two parts.
 	The length of the first part is given. Use a Tuple for your result.
@@ -132,10 +132,11 @@ public class Problem17 {
 	
 	static void randomSelection(List<Character> characters,int k)
 	{
+		System.out.println(" ");
 		while(k>0)
 		{
 		
-		System.out.println("random number "+k+" "+characters.get(new Random().nextInt(characters.size())));
+		System.out.print(" "+characters.get(new Random().nextInt(characters.size())));
 		k--;
 		}
 	}
