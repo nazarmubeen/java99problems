@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Problem26 {
 	
-	
+	//solution is still in progress
 
 /*	P26 (**) Generate the combinations of K distinct objects chosen from the N
  *  elements of a list.
