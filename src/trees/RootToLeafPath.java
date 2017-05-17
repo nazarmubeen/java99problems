@@ -45,7 +45,6 @@ public class RootToLeafPath {
 		{
 			return c=c+1;
 		}
-	
 		if(root.left!=null)
 		c=countLeafNodes(root.left,c);
 		if(root.right!=null)

@@ -86,9 +86,9 @@ public class TreeOperations {
 		if(root==null)
 			return;
 		
-		preOrderTraverse(root.left);
+		inOrderTraverse(root.left);
 		System.out.print(" -> " +root.data);
-		preOrderTraverse(root.right);
+		inOrderTraverse(root.right);
 	}
 	
 	
@@ -133,10 +133,6 @@ public class TreeOperations {
 		TreeOperations.binaryTreeInsert(root,1);
 		TreeOperations.binaryTreeInsert(root,6);
 		TreeOperations.binaryTreeInsert(root,19);
-		System.out.println("pre order");
-		TreeOperations.preOrderTraverse(root);
-		System.out.println("in order");
-		TreeOperations.inOrderTraverse(root);
 		return root;
 	}
 	
