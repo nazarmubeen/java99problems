@@ -1,4 +1,4 @@
-package arithmatic;
+package arithmaticproblems;
 
 import java.util.ArrayList;
 

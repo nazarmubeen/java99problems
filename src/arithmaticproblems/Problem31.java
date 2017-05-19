@@ -1,4 +1,4 @@
-package arithmatic;
+package arithmaticproblems;
 
 /*P31 (**) Determine whether a given integer number is prime.
 scala> 7.isPrime

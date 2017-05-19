@@ -1,4 +1,4 @@
-package arithmatic;
+package arithmaticproblems;
 
 
 /*P32 (**) Determine the greatest common divisor of two positive integer numbers.
