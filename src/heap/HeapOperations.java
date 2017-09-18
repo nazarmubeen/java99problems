@@ -6,7 +6,8 @@ public class HeapOperations {
 	 
 	 public static void main(String[] args)
 	 {
-	  int Elem[]={4,3,7,1,8,5,2,6};
+	 // int Elem[]={4,3,7,1,8,5,2,6};
+	  int  Elem[]= {8,3,5,1,9,7,4,2};
 	 HeapFunctions func=new HeapFunctions();
 	 //max heapify
 	 System.out.println("build max heap");
