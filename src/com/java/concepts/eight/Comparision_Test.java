@@ -1,4 +1,4 @@
-package com.java.concepts.eight;
+/*package com.java.concepts.eight;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -44,3 +44,4 @@ public class Comparision_Test {
 		
 	}
 }
+*/

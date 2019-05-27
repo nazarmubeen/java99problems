@@ -19,7 +19,8 @@ public class CollectionToMap {
 			    new Book(5, "Making Java Groovy", 45.99),
 			    new Book(6, "Gradle Recipes for Android", 23.76)
 			);
-		Map<Integer,Book> map=books.stream().collect(Collectors.toMap(Book::getId, Function.identity()));
+		Map<Integer,Book> map=books.stream()
+				.collect(Collectors.toMap(Book::getId, Function.identity()));
 		
 		System.out.println(" map is "+map);
 	}
