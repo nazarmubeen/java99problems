@@ -5,11 +5,17 @@ public class InheritanceTest {
 	public static void main(String[] args)
 	{
 		A a=new A();
+		
 		System.out.println(" ******** ");
 	//	B ba=(B) new A(); java.lang.ClassCastException
 		B b=new B();
 		System.out.println(" ******** ");
 		A ab=new B();
+		System.out.println(" a = "+ab.a);
+		ab.parent();
+		B ba=new B();
+		System.out.println(" a = "+ba.a);
+		ba.parent();
 		System.out.println(" ******** ");
 		C c=new C();
 		System.out.println(" ******** ");
@@ -34,14 +40,26 @@ interface Intface {
 
 class A implements Intface{
 	
+	int a=10;
 	public A(){
 		System.out.println(" this is A");
+	}
+	
+	void parent()
+	{
+		System.out.println(" i am parent");
 	}
 }
 
 class B extends A{
+	int a =20;
 	public B(){
 		System.out.println(" this is B");
+	}
+	
+	void parent()
+	{
+		System.out.println(" i am child");
 	}
 }
 
